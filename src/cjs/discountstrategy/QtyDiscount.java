@@ -9,17 +9,30 @@ package cjs.discountstrategy;
  *
  * @author Carson Schultz
  */
-public class FlatAmtDiscount implements DiscountStrategy {
-    private double discountRate = 5.00;
+public class QtyDiscount implements DiscountStrategy{
+    private double minQty;    
+    private double discountRate;
 
-    public FlatAmtDiscount(double discountRate) {
+    public QtyDiscount(double minQty, double discountRate) {
         setDiscountRate(discountRate);
-    }
-
+        setMinQty(minQty);
+    }   
+    
     @Override
     public final double getDiscountAmt(int qty, double unitCost) {
         //needs validation
-        return discountRate;
+        if(qty >= minQty){
+            return discountRate;
+        } 
+        return 0;
+    }   
+
+    public final double getMinQty() {
+        return minQty;
+    }
+
+    public final void setMinQty(double minQty) {
+        this.minQty = minQty;
     }
 
     public final double getDiscountRate() {
@@ -27,8 +40,7 @@ public class FlatAmtDiscount implements DiscountStrategy {
     }
 
     public final void setDiscountRate(double discountRate) {
-        //needs validation
         this.discountRate = discountRate;
     }
-
+   
 }
