@@ -11,7 +11,7 @@ package cjs.discountstrategy;
  */
 public interface StorageStrategy {
 
-    Customer findCustomerById(String custId);
+   public abstract Customer findCustomerById(String custId);
 
-    Product findProductById(String prodId);
+   public abstract Product findProductById(String prodId);
 }

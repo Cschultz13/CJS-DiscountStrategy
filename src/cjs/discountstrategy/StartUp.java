@@ -25,7 +25,7 @@ public class StartUp {
         //add products and quantity to sale
         register.addItemToSale("105", 2);
         register.addItemToSale("207", 3);
-        register.addItemToSale("208", 3);
+        register.addItemToSale("208", 5);
 
         //output to screen and console
         register.endSale(screen);

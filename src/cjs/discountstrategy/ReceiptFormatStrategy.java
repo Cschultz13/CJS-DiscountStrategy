@@ -11,6 +11,6 @@ package cjs.discountstrategy;
  */
 public interface ReceiptFormatStrategy {
     
-    public void getFormat();
+    public abstract void getFormat();
     
 }

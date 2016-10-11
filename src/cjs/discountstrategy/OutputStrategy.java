@@ -10,5 +10,6 @@ package cjs.discountstrategy;
  * @author Carson Schultz
  */
 public interface OutputStrategy {
-    public void outputReceipt(Receipt r);
+
+    public abstract void outputReceipt(Receipt r);
 }
