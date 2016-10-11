@@ -10,19 +10,20 @@ package cjs.discountstrategy;
  * @author Carson Schultz
  */
 public class Register {
+
     private Receipt receipt;
-    
-    public final void startNewSale(String customerID, StorageStrategy storage){
+
+    public final void startNewSale(String customerID, StorageStrategy storage) {
         //needs validation
-        
+        receipt = new Receipt(customerID, storage);
     }
-    
-    public final void endSale(OutputStrategy output){
+
+    public final void endSale(OutputStrategy output) {
         output.outputReceipt(receipt);
     }
-    
-    public final void addItemToSale(String prodId, int qty){
+
+    public final void addItemToSale(String prodId, int qty) {
         //needs validation
-        receipt.addItemtoReceipt(prodId,qty);
+        receipt.addItemToReceipt(prodId, qty);
     }
 }

@@ -5,18 +5,12 @@
  */
 package cjs.discountstrategy;
 
-import javax.swing.JOptionPane;
-
 /**
  *
  * @author Carson Schultz
  */
-public class GuiOutput implements OutputStrategy{
-
-    @Override
-    public final void outputReceipt(Receipt r) {
-        //needs validation
-        JOptionPane.showMessageDialog(null, r.ReceiptFormat());
-    }
+public interface ReceiptFormatStrategy {
+    
+    public void getFormat();
     
 }

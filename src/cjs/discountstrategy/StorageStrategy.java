@@ -10,5 +10,8 @@ package cjs.discountstrategy;
  * @author Carson Schultz
  */
 public interface StorageStrategy {
-    
+
+    Customer findCustomerById(String custId);
+
+    Product findProductById(String prodId);
 }
