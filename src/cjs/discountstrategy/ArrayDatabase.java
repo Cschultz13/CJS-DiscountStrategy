@@ -40,7 +40,7 @@ public class ArrayDatabase implements StorageStrategy {
         // needs validation
         Customer customer = null;
         for (Customer c : customers) {
-            if (c.getCustomerID().equals(custId)) {
+            if (c.getCustomerId().equals(custId)) {
                 customer = c;
                 break;
             }
